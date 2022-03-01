@@ -13,7 +13,7 @@ app.post("/users/create", (req: Request, res: Response) => {
     // consultar ou alterar a base de dados
     const { name, CPF, dateOfBirthAsString } = req.body;
 
-    const [day, month, year] = dateOfBirthAsString.split("/");
+    const [day, month, year] = dateOfBirthAsString.split("");
 
     const dateOfBirth: Date = new Date(`${year}-${month}-${day}`);
 
